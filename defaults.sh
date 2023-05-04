@@ -60,10 +60,10 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.screencapture type -string "png"
 
 # change screenshot save location
-if [[ ! -d "~/Desktop/ScreenShots" ]]; then
-    mkdir -p "~/Desktop/ScreenShots"
+if [[ ! -d "~/ScreenShots" ]]; then
+    mkdir -p "~/ScreenShots"
 fi
-defaults write com.apple.screencapture location -string "~/Desktop/ScreenShots"
+defaults write com.apple.screencapture location -string "~/ScreenShots"
 
 for app in "Dock" \
 	"Finder" \

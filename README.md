@@ -9,6 +9,7 @@
 $ cd
 $ xcode-select --install
 $ git clone https://github.com/m-yoshihiro/dotfiles.git
+$ chmod u+x ./dotfiles/setup.sh
 $ ./dotfiles/setup.sh
 ```
 
