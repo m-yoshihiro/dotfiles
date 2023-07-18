@@ -3,9 +3,10 @@ export LANG=ja_JP.UTF-8
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(anyenv init -)"
 export PATH="$PATH:/usr/local/bin/php"
-export PATH="/usr/local/opt/mysql@5.7/bin/:$PATH"
-export PATH="/usr/local/opt/python@3.9/bin:$PATH"
+export PATH="/usr/local/mysql@5.7/bin/:$PATH"
+export PATH="/usr/local/python@3.9/bin:$PATH"
 export PATH="$PATH:/opt/homebrew/bin/"
 export PATH="$PATH:/bin:/usr/bin:/usr/local/bin"
 export PATH="$PATH:/usr/local/sbin"
@@ -20,25 +21,34 @@ alias dc-u="docker-compose up -d"
 alias dc-ub="docker-compose up -d --build"
 alias dc-l="docker-compose logs"
 
-alias ga='git add'
-alias gs='git status'
-alias gpush='git push origin'
-alias gpull='git pull origin'
-alias gb='git branch'
-alias gc-m='git commit -m'
-alias gf='git fetch'
-alias gl='git log'
-alias gc='git checkout'
-alias gc-b='git checkout -b'
+alias ga="git add"
+alias gs="git status"
+alias gpush="git push origin"
+alias gpull="git pull origin"
+alias gb="git branch"
+alias gc-m="git commit -m"
+alias gf="git fetch"
+alias gl="git log"
+alias gc="git checkout"
+alias gc-b="git checkout -b"
 
-alias ll='ls -la'
-alias cl='clear && ls'
+alias ..="cd .."
+alias ...="cd ../../"
+alias ....="cd ../../../"
+alias .....="cd ../../../../"
+alias ll="mkdir -p && cd"
+alias ll="ls -la"
+alias cl="clear && ls"
 alias phpunit="./vendor/bin/phpunit"
 alias phpcs="./vendor/bin/phpcs"
 alias phpcbf="./vendor/bin/phpcbf"
 alias zconf="vi ~/dotfiles/dotfiles/.zshrc"
+alias source-zconf="source ~/dotfiles/dotfiles/.zshrc"
 alias cat="bat --style=plain"
 alias tree="tree -C"
+
+function mkcd() { mkdir -p $* && cd $_ }
+alias mkcd="mkcd"
 
 echo zconf.
 
